@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulaire</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Formulaire</h1>
+        <label id='error' style="color: red;"></label>
+        <br></br> 
+        <form id="Formulairee" onsubmit="event.preventDefault();execution();">
+            <span id="Sexe">Sexe: </span>
+            <label><input name="sexe" type="radio" value="Homme">Homme</label>
+            <label><input name="sexe" type="radio" value="Femme">Femme</label>
+            <br></br>
+            <span id="Nom">Nom:</span>
+            <label><input id="nom" type="text"></label>
+            <br></br>
+            <span id="Prenom">Prenom:</span>
+            <label><input id="prenom" type="text"></label>
+            <br></br>
+            <span id="Age">Age:</span>
+            <label><input id="age" type="text" oninput="testage()"></label>
+            <br></br>
+            <label><input id="button" type="submit"></label>
+        </form>
+
+        <p id = 'result'></p>
+        <script src="Formulaire.js"></script>
+    </body>
+</html>

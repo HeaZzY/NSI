@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <Title>Le formulaire</Title>
+        <script type="text/javascript">
+            var nom=document.getElementsById("salut");
+            alert(nom);
+        </script>
+    </head>
+    <body>
+        <p>Formulaire utilisaant la methode GET</p>
+        <form id="formulairetah" onsubmit="event.preventDefault(); addComent()">
+            <p><input type="text" name="id" id="salut">dd</p>
+            <p><input type="text" name="mdp"></p>
+            <p><input type="submit" name="Envoyer"/></p>
+        </form>
+        <p>Récupération par la méthode GET</p>
+        <p>Numéro d'identification<span id="id"></span></p>
+        <p>Mot de passe: <span id="mdp"></span></p>
+        
+    </body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <title>Outil de conversion</title>
+        <style type="text/css">
+            body{
+                background: rgb(226, 226, 226);
+                
+            }
+
+            
+
+            h1{
+                color: rgba(140, 0, 255, 0.8);
+                text-align: center;
+                
+            }
+            form{
+                color: white;
+                font-family: Comic Sans MS, Comic Sans, cursive;
+                width: 500px;
+                height: 600px;
+                background: linear-gradient(225deg, #34e1ff 0%, #c625d0 100%);
+                text-align: center;
+                vertical-align: middle;
+                border: solid;
+                border: 0;
+                border-radius: 30px;
+                margin:0 auto;
+                box-shadow: 10px -10px 25px 0 rgba(0, 0, 0, 0.8), -10px 10px 25px 0px rgba(12, 12, 12, 0.8);
+            }
+            
+            #nbBaseI{
+                border: 0;
+                border-radius: 30px;
+
+            }
+
+            #Button{
+                color: rgb(255, 255, 255);
+                font-size: 16px;
+                font-family: Comic Sans MS, Comic Sans, cursive;
+                border: 0;
+                width: 100px;
+                height: 40px;
+                background: linear-gradient(225deg, #34e1ff 0%, #c625d0 100%);
+                border-radius: 30px;
+                cursor: pointer;
+                transition: all .2s;
+                
+            }
+
+
+            #Button:hover{
+                transform: translate(0, 10px);
+                box-shadow: 10px -10px 25px 0 rgba(255, 255, 255, 0.80), -10px 10px 25px 0px rgba(255, 255, 255, 0.80);
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Convertisseur de base.</h1>
+        <br></br> 
+        <form id="Formulaire" onsubmit="event.preventDefault();conversion();">           
+            <div id="baseidiv">
+                <br/><br/><br/><br/>
+                <label id="basei">Base de départ:</label>
+                <br/>
+                <label id="ScaleI"><input class="sc" type="range" id="BaseI" min="2" max="16" oninput="update('basei','Base de départ: '+this.value)"></label>
+            </div>
+            <br/><br/>
+            <label id="basej">Base de sortie:</label>
+            <br/>
+            <label><input class="sc" type="range" id="BaseJ" min="2" max="16" oninput="update('basej','Base de sortie: '+this.value)"></label>
+            
+            <br/><br/>
+
+
+
+            <label id="nb_base_i">Nombre de la base de départ:</label>
+            <br/><br/>
+            <label><input type="text" id="nbBaseI"></label>
+            <br/><br/>
+
+
+            <label id='erreur' style="color: red;"></label>
+            <br/>
+            <label><input id="Button" type="submit" value="Convertir"></label>
+            <br/>
+            <label id="resultat"></label>
+            
+
+
+
+            <script language="JavaScript">
+
+                function update(id,message){
+                    clear(id);
+                    var result = document.getElementById(id);
+                    result.innerHTML = result.innerHTML+ message;
+                }
+                function clear(id){
+                    var result = document.getElementById(id);
+                    result.innerHTML = "";
+                }
+
+
+            </script>
+        </form>
+    </body>
+</html>
